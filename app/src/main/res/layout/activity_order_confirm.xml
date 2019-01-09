@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.OrderConfirmActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvDeskNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="32sp"
+            android:textColor="@color/colorBlack"
+            android:text="@string/DeskNum"/>
+
+        <TextView
+            android:id="@+id/tvTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvDeskNum"
+            android:textSize="32sp"
+            android:textColor="@color/colorBlack"
+            android:text="@string/TotalAmount"/>
+
+        <TextView
+            android:id="@+id/tvDiscountTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvTotalAmount"
+            android:textSize="32sp"
+            android:textColor="@color/colorRed"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:background="@color/colorYellow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="項次"
+            android:textColor="@color/colorRed"/>
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="餐點類型"
+            android:textColor="@color/colorRed"/>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="餐點名稱"
+            android:textColor="@color/colorRed"/>
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="金額"
+            android:textColor="@color/colorRed"/>
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="數量"
+            android:textColor="@color/colorRed"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvOrderDetail"
+        android:layout_width="match_parent"
+        android:layout_height="325dp"
+        android:scrollbars="vertical"/>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="15dp">-->
+
+        <!--<TextView-->
+            <!--android:textColor="@color/colorBlack"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:textSize="18sp"-->
+            <!--android:text="優惠卷:"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvQrcode"-->
+            <!--android:textColor="@color/colorBlack"-->
+            <!--android:textSize="18sp"-->
+            <!--android:background="@color/colorLightYellow"-->
+            <!--android:textAlignment="center"-->
+            <!--android:layout_width="180dp"-->
+            <!--android:layout_height="24dp" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/ivQrcode"-->
+            <!--android:layout_width="25dp"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:src="@drawable/qrcode"/>-->
+
+    <!--</LinearLayout>-->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/btnMenuModify"
+            android:text="@string/modify"
+            android:textSize="16sp"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/btnMenuSubmit" />
+
+        <Button
+            android:id="@+id/btnMenuSubmit"
+            android:text="@string/submit"
+            android:textSize="16sp"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>
